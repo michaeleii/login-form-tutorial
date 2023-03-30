@@ -74,6 +74,11 @@ app.post(
 	})
 );
 
+app.get("/logout", (req, res) => {
+	req.logout();
+	res.redirect("/");
+});
+
 app.listen(3000, () => {
 	console.log("Login App listening on port 3000!");
 });
